@@ -1,0 +1,6 @@
+# No external dependencies required
+# This project uses Python standard library only
+#
+# For running tests with coverage (optional):
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
