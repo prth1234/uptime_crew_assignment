@@ -91,4 +91,4 @@ def generate_sales_data(num_records=1000,output_file='data/sales_data.csv'):
         print(f"  {record}")
 
 if __name__=="__main__":
-    generate_sales_data(num_records=1000)
+    generate_sales_data(num_records=50)
