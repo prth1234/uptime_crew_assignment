@@ -1,4 +1,5 @@
 import csv
+import os
 import random
 from datetime import datetime,timedelta
 
@@ -80,6 +81,8 @@ def generate_sales_data(num_records=1000,output_file='data/sales_data.csv'):
         }
         records.append(record)
     records.sort(key=lambda x:x['date'])
+    # Create directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file,'w',newline='',encoding='utf-8') as f:
         fieldnames=['sale_id','date','product_name','category','quantity','unit_price','region']
         writer=csv.DictWriter(f,fieldnames=fieldnames)
